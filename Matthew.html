@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎂 Feliz Cumpleaños Matthew UwU 💖</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #ffeaf6, #ffd6eb, #fff0f8);
+      background-image: radial-gradient(rgba(255, 182, 193, 0.3) 1px, transparent 1px),
+                        radial-gradient(rgba(255, 192, 203, 0.3) 1px, transparent 1px);
+      background-size: 80px 80px;
+      color: #d63384;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 10px;
+      position: relative;
+    }
+
+    .glow {
+      font-size: 2.3rem;
+      color: #ff66b2;
+      text-shadow: 0 0 10px #ffcce5, 0 0 20px #ffb6c1;
+      animation: glowPulse 3s infinite;
+    }
+
+    @keyframes glowPulse {
+      0%, 100% { text-shadow: 0 0 10px #ffcce5, 0 0 20px #ffb6c1; }
+      50% { text-shadow: 0 0 20px #ff99cc, 0 0 30px #ffb6c1; }
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .navbar a {
+      background: #ffb6c1;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      box-shadow: 0 0 10px #ffcce5;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    .navbar a:hover, .navbar a.active {
+      background: #ff8fb8;
+      transform: scale(1.1);
+      box-shadow: 0 0 15px #ff99cc;
+    }
+
+    .content {
+      max-width: 700px;
+      margin: 40px auto;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 30px;
+      border-radius: 30px;
+      box-shadow: 0 0 20px rgba(255, 192, 203, 0.5);
+      animation: fadeIn 1.5s ease;
+    }
+
+    .hearts div {
+      position: fixed;
+      top: 0;
+      color: #ff99cc;
+      font-size: 1.5rem;
+      animation: floatHearts 5s linear infinite;
+    }
+
+    @keyframes floatHearts {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .button-section a {
+      display: inline-block;
+      background: #ffb6c1;
+      color: white;
+      padding: 20px 40px;
+      border-radius: 25px;
+      text-decoration: none;
+      box-shadow: 0 0 15px #ffcce5;
+      margin: 15px;
+      font-size: 1.2rem;
+      transition: all 0.3s;
+    }
+
+    .button-section a:hover {
+      background: #ff8fb8;
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #ff99cc;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="glow">💖 Feliz Cumpleaños Matthew UwU 💖</h1>
+    <nav class="navbar">
+      <a href="Matthew.html" class="active">Inicio</a>
+      <a href="Matthew2.html">¿Quien es Matt?</a>
+      <a href="Matthew3.html">Fotos</a>
+      <a href="Matthew4.html">Importantes</a>
+      <a href="Matthew5.html">Mensajes</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section id="inicio">
+      <p class="intro">✨ Bienvenido a un pequeño rincon creado con mucho cariño para ti Matthew.  
+      Aqui hay recuerdos, personas y palabras que te celebran hoy y siempre por que te quiero munchisimo bro💕</p>
+    </section>
+
+    <img src="Imagen1.png" class="center" width="450" height="350">
+
+    <section id="quien-es" class="button-section">
+      <a href="Matthew2.html">💗 Quién es Matthew 💗</a>
+    </section>
+
+    <section id="fotos" class="button-section">
+      <a href="Matthew3.html">📸 Ver Fotos</a>
+    </section>
+
+    <section id="importantes" class="button-section">
+      <a href="Matthew5.html">💞 Personas importantes</a>
+    </section>
+
+    <section id="mensajes" class="button-section">
+      <a href="#">💌 Mensajes especiales</a>
+    </section>
+  </main>
+
+  <div class="hearts"></div>
+
+  <script>
+    const heartsContainer = document.querySelector('.hearts');
+
+    setInterval(() => {
+      const heart = document.createElement('div');
+      heart.textContent = '💖';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = 3 + Math.random() * 3 + 's';
+      heart.style.position = 'fixed';
+      heart.style.top = '0';
+      heart.style.fontSize = Math.random() * 20 + 15 + 'px';
+      heartsContainer.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 6000);
+    }, 500);
+  </script>
+</body>
+</html>
