@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fotos con Matthew 💕</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+body{margin:0;font-family:'Poppins',sans-serif;background:linear-gradient(180deg,#ffeaf6,#ffd6eb,#fff0f8);background-image:radial-gradient(rgba(255,182,193,0.3)1px,transparent 1px),radial-gradient(rgba(255,192,203,0.3)1px,transparent 1px);background-size:80px 80px;color:#d63384;overflow-x:hidden;}
+header{text-align:center;padding:30px 10px;}
+.glow{font-size:2.3rem;color:#ff66b2;text-shadow:0 0 10px #ffcce5,0 0 20px #ffb6c1;animation:glowPulse 3s infinite;}
+@keyframes glowPulse{0%,100%{text-shadow:0 0 10px #ffcce5,0 0 20px #ffb6c1;}50%{text-shadow:0 0 20px #ff99cc,0 0 30px #ffb6c1;}}
+.navbar{display:flex;justify-content:center;flex-wrap:wrap;gap:15px;margin-top:20px;}
+.navbar a{background:#ffb6c1;color:white;padding:12px 25px;border-radius:25px;text-decoration:none;box-shadow:0 0 10px #ffcce5;font-weight:500;transition:0.3s;}
+.navbar a:hover,.navbar a.active{background:#ff8fb8;transform:scale(1.1);box-shadow:0 0 15px #ff99cc;}
+.content{max-width:700px;margin:40px auto;text-align:center;background:rgba(255,255,255,0.7);padding:30px;border-radius:30px;box-shadow:0 0 20px rgba(255,192,203,0.5);animation:fadeIn 1.5s ease;}
+@keyframes fadeIn{from{opacity:0;transform:scale(0.9);}to{opacity:1;transform:scale(1);}}
+.gallery img{width:180px;margin:10px;border-radius:20px;box-shadow:0 0 15px #ffb6c1;transition:0.3s;}
+.gallery img:hover{transform:scale(1.1);}
+.hearts div{position:fixed;top:0;color:#ff99cc;font-size:1.5rem;animation:floatHearts 5s linear infinite;}
+@keyframes floatHearts{0%{transform:translateY(0);opacity:1;}100%{transform:translateY(100vh);opacity:0;}}
+</style>
+</head>
+<body>
+<header>
+<h1 class="glow">📸 Momentos Especiales 💞</h1>
+<nav class="navbar">
+ <a href="Matthew.html" class="active">Inicio</a>
+      <a href="Matthew2.html">Quién es</a>
+      <a href="Matthew3.html">Fotos</a>
+      <a href="Matthew4.html">Personas importantes</a>
+      <a href="Matthew5.html">Mensajes</a>
+</nav>
+</header>
+
+<main class="content">
+<div class="gallery">
+<img src="Imagen2.png" alt="Foto 2">
+<img src="Imagen3.png" alt="Foto 3">
+<img src="Imagen4.png" alt="Foto 1">
+</div>
+
+<main class="content">
+<div class="gallery">
+<img src="Imagen5.png" alt="Foto 2">
+<img src="Imagen6.png" alt="Foto 3">
+<img src="Imagen7.png"alt=Foto 1">
+</div>
+
+<main class="content">
+<div class="gallery">
+<img src="Imagen8.png" height="100 alt="Foto 2">
+<img src="Imagen10.png" height="200" alt="Foto 3">
+<img src="Imagen9.png" height="200" alt="Foto 1">
+</div>
+
+<p>💖🌸Recuerda Que No Estas Solo🌸💖</p>
+</main>
+
+<div class="hearts"></div>
+<script>
+const heartsContainer=document.querySelector('.hearts');
+setInterval(()=>{
+const heart=document.createElement('div');
+heart.textContent='💖';
+heart.style.left=Math.random()*100+'vw';
+heart.style.animationDuration=3+Math.random()*3+'s';
+heart.style.position='fixed';
+heart.style.top='0';
+heart.style.fontSize=Math.random()*20+15+'px';
+heartsContainer.appendChild(heart);
+setTimeout(()=>heart.remove(),6000);
+},500);
+</script>
+</body>
+</html>
